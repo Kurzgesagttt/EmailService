@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: emailService
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:lucasmoreno@gmail.com}
+    password: ${MAIL_PASSWORD:sua_senha_de_app}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.debug: true
