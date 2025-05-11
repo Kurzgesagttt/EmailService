@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmailController {
 
     @PostMapping
-    public ResponseEntity<Email> emailSender(RequestEmailDTO dto){
+    public ResponseEntity<RequestEmailDTO> emailSender(RequestEmailDTO dto){
 
 
 
