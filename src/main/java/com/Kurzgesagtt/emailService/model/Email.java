@@ -15,7 +15,7 @@ public class Email {
     private UUID id;
 
     @Column(name = "sender")
-    private String senderEmail;
+    private String receiverEmail;
 
     @Column(name = "subject")
     private String subject;
@@ -23,18 +23,18 @@ public class Email {
     @Column(name = "content")
     private String content;
 
-    public Email(String senderEmail, String subject, String content) {
-        this.senderEmail = senderEmail;
+    public Email(String receiverEmail, String subject, String content) {
+        this.receiverEmail = receiverEmail;
         this.subject = subject;
         this.content = content;
     }
 
     public String getSenderEmail() {
-        return senderEmail;
+        return receiverEmail;
     }
 
     public void setSenderEmail(String senderEmail) {
-        this.senderEmail = senderEmail;
+        this.receiverEmail = senderEmail;
     }
 
     public String getSubject() {

@@ -31,7 +31,6 @@ public class MailSenderConfig {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.transport.protocol", "smtp");
         props.put("mail.debug", "true");
-
         return mailSender;
     }
 }
