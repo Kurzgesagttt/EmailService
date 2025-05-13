@@ -1,17 +1,24 @@
 package com.Kurzgesagtt.emailService.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 import java.io.Serializable;
 
+@JsonPropertyOrder({"mail", "subject", "content"})
 public class RequestEmailDTO implements Serializable {
 
+    @JsonProperty("mail")
     @Email
     @NotBlank(message = "Campo email vazio")
     private String receiverEmail;
+
+    @JsonProperty("subject")
     private String subject;
 
+    @JsonProperty("body")
     @NotBlank(message = "Não é possível enviar o email sem um corpo de mensagem")
     private String content;
 
