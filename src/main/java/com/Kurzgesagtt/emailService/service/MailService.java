@@ -19,7 +19,4 @@ public class MailService {
         message.setText(dto.getContent());
         javaMail.send(message);
     }
-
-
-
 }
